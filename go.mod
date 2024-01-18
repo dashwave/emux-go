@@ -1,4 +1,4 @@
-module changeme
+module github.com/dashwave/emux-go
 
 go 1.21.1
 
