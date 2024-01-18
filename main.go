@@ -1,4 +1,4 @@
-package main
+package emux
 
 import (
 	"embed"
@@ -40,6 +40,6 @@ func StartEmulator(emulatorResourceURL string) {
 	}
 }
 
-func main() {
-	StartEmulator("boldfeather-cmjngihauntc738g52r0.i03de73b5f.dashwave.live")
-}
+// func main() {
+// 	StartEmulator("boldfeather-cmjngihauntc738g52r0.i03de73b5f.dashwave.live")
+// }
