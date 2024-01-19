@@ -1,9 +1,10 @@
-package emux
+package main
 
 import (
 	"embed"
 	_ "embed"
 	"log"
+	"os"
 
 	"github.com/wailsapp/wails/v3/pkg/application"
 )
@@ -40,6 +41,11 @@ func StartEmulator(emulatorResourceURL string) {
 	}
 }
 
-// func main() {
-// 	StartEmulator("boldfeather-cmjngihauntc738g52r0.i03de73b5f.dashwave.live")
-// }
+func main() {
+	if len(os.Args) < 2 {
+		log.Fatal("Need to provide emulator url as the first argument")
+	}
+	arg := os.Args[1]
+
+	StartEmulator(arg)
+}
