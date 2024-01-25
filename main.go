@@ -13,7 +13,7 @@ import (
 var assets embed.FS
 
 func constructWindowURL(url string) string {
-	return "https://" + url + "/#!action=stream&udid=emulator-5554&player=mse&ws=wss%3A%2F%2F" + url + "%2F%3Faction%3Dproxy-adb%26remote%3Dtcp%253A8886%26udid%3Demulator-5554"
+	return "https://" + url + "/#!action=stream&udid=emulator-5554&player=broadway&ws=wss%3A%2F%2F" + url + "%2F%3Faction%3Dproxy-adb%26remote%3Dtcp%253A8886%26udid%3Demulator-5554"
 }
 
 func StartEmulator(emulatorResourceURL string) {
@@ -32,7 +32,7 @@ func StartEmulator(emulatorResourceURL string) {
 	// Load an external URL
 	window.SetURL(constructWindowURL(emulatorResourceURL))
 	window.Center()
-	window.SetMinSize(378, 642)
+	window.SetMinSize(300, 490)
 
 	err := app.Run()
 
